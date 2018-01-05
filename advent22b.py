@@ -4,19 +4,23 @@
 
 
 '''
-For this puzzle, I initially thought about actually creating a multi-dimensional list, where each position tracks its own current state. However, it looks like the list would need to grow over time at an arbitrary rate, if the position goes outside the bounds of the current multi-dimensional list. So, instead of wrangling a large matrix that grows over time, I thought it would be easier to just have a list of infected positions.
+The second part introduces 2 more states, weakened and flagged. The bulk of the logic is basically the same, with just the new states and the way they affect the facing direction.
+
+Also, I changed the data structures for the tracking from lists into sets, because it was taking too long with lists (possibly HOURS, according to spit-ball estimates). We're doing mostly checks to see if values exist in the structure and the values were unique, so the speed advantage of sets was greatly appreciated and brought the execution time down to under 30 seconds.
 '''
 
 with open("advent22a.txt", "r") as f: all_list = f.readlines()
 # all_list = ["..#","#..","..."]  # Test data!
 # print("\n".join(all_list))
 
-all_infected = []  # Track all the infected coordinates.
+all_infected = set()  # NEW: Track all the infected coordinates as a set!
+all_weakened = set()  # NEW: Track all the weakened coordinates as a set!
+all_flagged = set()  # NEW: Track all the flagged coordinates as a set!
 
 # Get all positions of infected squares.
 for y in range(len(all_list)):
     for x in range(len(all_list[y])):
-        if all_list[y][x] == "#": all_infected.append(str(x) + "," + str(y))
+        if all_list[y][x] == "#": all_infected.add(str(x) + "," + str(y))
 # print(all_infected)
 
 curr_facing = "n"  # Starting by facing north.
@@ -24,39 +28,43 @@ curr_x = int(len(all_list) / 2)  # Find center.
 curr_y = curr_x
 # print ("CENTER:", curr_x, curr_y)
 
-num_infected = 0  # Track the number of times infection occurred.
-for i in range(10000):
+num_infected = 0
+for i in range(10000000):
     # if curr_x < 0 or curr_y < 0: print("PROBLEM:", curr_x, curr_y)
-    pos_str = str(curr_x) + "," + str(curr_y)  # String position.
+    pos_str = str(curr_x) + "," + str(curr_y)
 
     if pos_str in all_infected:
-        # First, change direction it's facing.
         if curr_facing == "n": curr_facing = "e"
         elif curr_facing == "e": curr_facing = "s"
         elif curr_facing == "s": curr_facing = "w"
         elif curr_facing == "w": curr_facing = "n"
-
-        # Then, toggle infection.
-        all_infected.remove(pos_str)  # If currently infected, make clean.
+        all_infected.remove(pos_str)
+        all_flagged.add(pos_str)
+    elif pos_str in all_flagged:
+        if curr_facing == "n": curr_facing = "s"
+        elif curr_facing == "e": curr_facing = "w"
+        elif curr_facing == "s": curr_facing = "n"
+        elif curr_facing == "w": curr_facing = "e"
+        all_flagged.remove(pos_str)
+    elif pos_str in all_weakened:
+        all_weakened.remove(pos_str)
+        all_infected.add(pos_str)
+        num_infected += 1
+        # if num_infected % 100000 == 0: print("INFECTED:", num_infected)  # Spit-ball benchmarking.
     else:
-        # First, change direction it's facing.
         if curr_facing == "n": curr_facing = "w"
         elif curr_facing == "e": curr_facing = "n"
         elif curr_facing == "s": curr_facing = "e"
         elif curr_facing == "w": curr_facing = "s"
+        all_weakened.add(pos_str)
 
-        # Then, toggle infection.
-        all_infected.append(pos_str)  # If currently clean, make infected.
-        num_infected += 1  # Increment number by 1!
-
-    # Last, move forward by 1, in the direction it's facing.
     if curr_facing == "n": curr_y -= 1
     elif curr_facing == "e": curr_x += 1
     elif curr_facing == "s": curr_y += 1
     elif curr_facing == "w": curr_x -= 1
 
 '''
-The following is to print out the final matrix, for fun. Final result looked like a rabbit dangling at the end of a stick? Or maybe a hobo stick with sack of stuff? Or maybe it's nothing and any resemblance is coincidence?
+The following is to print out the final matrix, for fun. Final result looked like a big wasp nest?
 '''
 # max_dim = 0
 # for this_infected in all_infected:
