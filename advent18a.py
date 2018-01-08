@@ -17,14 +17,14 @@ last_freq = 0  # Track the last sound that was made.
 registers = {}  # The registers!
 
 while True:
-    line_tokens = all_lines_list[curr_pos].strip().split(" ")  # Split the instruction line into string tokens. (instruction X Y)
+    line_tokens = all_lines_list[curr_pos].strip().split(" ")  # Split line into string tokens. (instruction X Y)
     skip_num = 1  # Number of instructions to jump at the end of the loop interation.
 
     if line_tokens[1] not in registers: registers[line_tokens[1]] = 0  # If the X doesn't exist, make one.
     # print ("LOOP line_tokens:", line_tokens, "curr_pos:", curr_pos, "registers:", registers)
 
-    if len(line_tokens) > 2 and line_tokens[2].isalpha():  # Sometimes the Y is an index letter, sometimes it's a value.
-        line_tokens[2] = registers[line_tokens[2]]  # If it's a letter, use it to get the value at that register location.
+    if len(line_tokens) > 2 and line_tokens[2].isalpha():  # Sometimes Y is a letter, sometimes it's a value.
+        line_tokens[2] = registers[line_tokens[2]]  # If letter, use it to get value at that register location.
 
     # Depending on instruction, maybe possible actions...
     if line_tokens[0] == "snd": last_freq = registers[line_tokens[1]]  # Store the sound!
@@ -37,9 +37,9 @@ while True:
             # print("RECOVERY! line_tokens:", line_tokens, "LAST_FREQ:", last_freq)
             break
     elif line_tokens[0] == "jgz":
-        if registers[line_tokens[1]] > 0: skip_num = int(line_tokens[2])  # Change the number of instructions to jump.
+        if registers[line_tokens[1]] > 0: skip_num = int(line_tokens[2])  # Number of instructions to jump.
     
     curr_pos += skip_num  # Go to the next instruction.
-    if curr_pos < 0 or curr_pos > len(all_lines_list): break  # If the instructions take it out of the register, exit.
+    if curr_pos < 0 or curr_pos > len(all_lines_list): break  # If instructions jump out of register, exit.
 
 print("LAST_FREQ:", last_freq)
