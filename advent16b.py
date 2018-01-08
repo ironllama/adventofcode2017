@@ -9,7 +9,7 @@ I actually rewrote this one three times. The first time, I just wrapped everythi
 When looking for patterns in output, I realized that the output actually cycles back and repeats every 42 times! (Probably different for different problem inputs.) Knowing that, I just needed to divide by the number of times I was going to run it and if there was a remainder, only run the dance that number of times. However, to further optimize, since we're already tracking all the outputs per cycle, we don't have to run the dance anymore; the remainder can be used to determine which offset from the beginning of the cycle.
 '''
 
-with open("advent16a.txt", "r") as f: all_file_list = f.read().strip().split(",")
+with open("advent16.in", "r") as f: all_file_list = f.read().strip().split(",")
 programs = list(map(chr, range(97, 97 + 16)))  # List instead of string, to support re-assignment!
 num_dances = 1000000000  # NEW: A Billion?!! Holy cow.
 

@@ -9,7 +9,7 @@ The second part introduces 2 more states, weakened and flagged. The bulk of the 
 Also, I changed the data structures for the tracking from lists into sets, because it was taking too long with lists (possibly HOURS, according to spit-ball estimates). We're doing mostly checks to see if values exist in the structure and the values were unique, so the speed advantage of sets was greatly appreciated and brought the execution time down to under 30 seconds.
 '''
 
-with open("advent22a.txt", "r") as f: all_list = f.readlines()
+with open("advent22.in", "r") as f: all_list = f.readlines()
 # all_list = ["..#","#..","..."]  # Test data!
 # print("\n".join(all_list))
 

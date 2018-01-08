@@ -9,7 +9,7 @@ The next part involves tracking collisions, or when two particles occupy the sam
 We have to use a separate list for all the particle positions, all the collision positions, and all the particles to remove because of the reciprocal and temporal nature of the removal. In other words, once we've determined that a value Y collides with a previous particle X, we have to know to remove both X and Y from the list of particles. However, we can't remove them immediately because we don't know if there will be a Z that also comes into the same position as X and Y, later in the list of particles.
 '''
 
-with open("advent20a.txt", "r") as f: all_file_list = f.readlines()
+with open("advent20.in", "r") as f: all_file_list = f.readlines()
 
 def parse(this_line):
     return [list(map(int, this_particle[3:-1].split(","))) for this_particle in this_line.strip().split(", ")]

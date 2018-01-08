@@ -8,7 +8,7 @@ the file are a single number, which gives further instructions. So, we basically
 after processing, go to another line. Since we may not necessarily read every line, and certainly not
 in order, it's a pretty good candidate for a while loop.'''
 
-with open("day5a.txt") as f:  # Cleaner and better way to read/write files using with!
+with open("advent05.in") as f:  # Cleaner and better way to read/write files using with!
     # Read file as a big string, then split into list by newlines.
     # Did this instead of just readlines(), because we also want to rid of the newline on each line.
     allLinesList = f.read().splitlines()

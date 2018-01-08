@@ -7,7 +7,7 @@ import 'dart:async';
 import 'dart:io';
 
 void main() {
-  new File("advent01.txt").readAsString().then((String allFileStr) {
+  new File("advent01.in").readAsString().then((String allFileStr) {
       int sumTotal = 0;
       for (int i = 0; i < allFileStr.length; i++) {
           String thisChar = allFileStr[i];

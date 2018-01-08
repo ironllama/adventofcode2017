@@ -8,7 +8,7 @@ into a list of separate words. Then just loop through each word in the list to s
 in the list matches any proceeding word in the list. If any words match, then the line is deemed
 invalid and the loop continues to the next line of words.'''
 
-f = open("day4a.txt")
+f = open("advent04.in")
 allLinesList = f.readlines()  # Read from file as lines into a list of lines!
 
 # print("TOTAL LINES: ", len(allLinesList))

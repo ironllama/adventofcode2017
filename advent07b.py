@@ -7,7 +7,7 @@
 
 I combined this with Part I, to generate the root "branch" and start the recursive walk.'''
 
-with open("advent07a.txt") as f:
+with open("advent07.in") as f:
     all_lines_list = f.readlines()  # Read from file as lines into a list of lines!
     # all_lines_list = ["pbga (66)", "xhth (57)", "ebii (61)", "havc (66)", "ktlj (57)", "fwft (72) -> ktlj, cntj, xhth", "qoyq (66)", "padx (45) -> pbga, havc, qoyq", "tknk (41) -> ugml, padx, fwft", "jptl (61)", "ugml (68) -> gyxo, ebii, jptl", "gyxo (61)", "cntj (57)"]
 

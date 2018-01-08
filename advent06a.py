@@ -7,7 +7,7 @@
 of ledger to check for a repeating combination of list elements. I ended up just creating a string out of the ever changing
 list states and then seeing if any new strings matched old ones with a simple 'if in' control statement.'''
 
-with open("advent06a.txt") as f:  # Reading in from file for puzzle inputs.
+with open("advent06.in") as f:  # Reading in from file for puzzle inputs.
     allNumsList = f.read().split("\t")  # Read file as a big string, then split into list by tabs.
     # allNumsList = ["0", "2", "7", "0"]  # Test array!
 

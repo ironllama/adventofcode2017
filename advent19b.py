@@ -7,7 +7,7 @@
 Added a variable to track the number of cycles in our loop. That's it!
 '''
 
-with open("advent19a.txt", "r") as f: lines_list = f.readlines()
+with open("advent19.in", "r") as f: lines_list = f.readlines()
 
 # Test data!
 # # lines_list = ["     |          ", "     |  +--+    ", "     A  |  C    ", " F---|----E|--+ ", "     |  |  |  D ", "     +B-+  +--+ "]

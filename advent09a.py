@@ -5,7 +5,7 @@
 
 '''Process each letter to determine shift in state, whether currently in a garbage state or an ignoring-next-char state. While doing that, keep track of how deep each of the brackets are nested, and use that depth level to add up the different blocks (groups) in the stream of characters. There was a bit of mental effort before coding to organize the different possible states. (Probably best on paper -- there's quite a few possible shifts to optimize.'''
 
-with open("advent09a.txt", "r") as f:
+with open("advent09.in", "r") as f:
     all_lines_str = f.read().strip()
 
     # Test data!

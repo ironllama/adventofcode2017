@@ -5,7 +5,7 @@
 
 ''' The only real difference with this one, is that we have to track the garbage. Given our current method of reading through the characters as they come in, is pretty straightforward! Yay! (Removed some of the code tracking levels and total of group levels.)'''
 
-with open("advent09a.txt", "r") as f:
+with open("advent09.in", "r") as f:
     all_lines_str = f.read().strip()
 
     # Test data!

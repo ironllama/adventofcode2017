@@ -37,4 +37,4 @@ def part2(data):
         particles = [d for i, d in enumerate(particles) if i not in delete]
         print(len(particles))
 
-part2(open("advent20a.txt").read())
+part2(open("advent20.in").read())

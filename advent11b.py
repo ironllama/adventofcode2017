@@ -7,7 +7,7 @@
 
 import math as math
 
-with open("advent11a.txt", "r") as f:
+with open("advent11.in", "r") as f:
     all_file = f.read().strip()
 
 all_file_list = all_file.split(",")

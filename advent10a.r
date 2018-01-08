@@ -1,4 +1,4 @@
-# allFileStr = read.csv("advent10a.txt")
+# allFileStr = read.csv("advent10.in")
 # allFileStr <- "129,154,49,198,200,133,97,254,41,6,2,1,255,0,191,108"  # Starting as string.
 # puzzleList <- 0:254
 

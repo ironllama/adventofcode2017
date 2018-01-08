@@ -7,7 +7,7 @@
 For this one, I thought that since it was an indeterminate traversal through the data, I'd use a recursive function. My version does not take into account the shorter variations of larger paths. For example, if there is a path A->B->C->D, I don't care about A->B->C or A->B or A, since there are longer path with those pieces and we're only interseted in the largest total value for paths, which seem to suggest we need to total up only the longest path variations.
 '''
 
-with open("advent24a.txt", "r") as f: all_lines_list = f.readlines()
+with open("advent24.in", "r") as f: all_lines_list = f.readlines()
 # all_lines_list = ["0/2", "2/2", "2/3", "3/4", "3/5", "0/1", "10/1", "9/10"]  # Test data!
 
 starting_list = []  # To track which ports are starting ports, or have a port that is 0.

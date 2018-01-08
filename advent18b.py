@@ -11,7 +11,7 @@ Essentially, run the first program until it exhausted the incoming queue and nee
 This took me an inordinate time to figure out because of a small bug, that I want to blame on the unclear instructions. It seemed that the only command that MAY have a integer as X was the jgz command. Without addressing this possibility, the two programs send ever larger messages to each other and never end up stopping. This wasn't really addressed in the instructions or examples, and it was only spotted after it sat untouched for a couple weeks and I looked through it again, with fresh eyes. So, I guess some of the blame is one me, the programmer for not vetting the input. Anyway, after fixing the bug, it produced the answer immediately.
 '''
 
-with open("advent18a.txt", "r") as f: all_lines_list = f.readlines()
+with open("advent18.in", "r") as f: all_lines_list = f.readlines()
 
 # Test data!
 # all_lines_list = ["set a 1", "add a 2", "mul a a", "mod a 5", "snd a", "set a 0", "rcv a", "jgz a -1", "set a 1", "jgz a -2"]

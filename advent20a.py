@@ -9,7 +9,7 @@ At first, I thought I would just try to determine which particle had the smalles
 The second approach was to see how fast the 'closest' particle would change, or if it started to become evident as other particles swung out of the ballpark over time. Fortunately, it became pretty quickly evident that one particular particle held onto the position of being 'closest' and it turns out that it was the answer! Yay for brute-force!
 '''
 
-with open("advent20a.txt", "r") as f: all_file_list = f.readlines()
+with open("advent20.in", "r") as f: all_file_list = f.readlines()
 
 def parse(this_line):  # Helper function to cut up each line in the file into a multi-dimensional list.
     return [list(map(int, this_particle[3:-1].split(","))) for this_particle in this_line.strip().split(", ")]

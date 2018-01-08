@@ -13,7 +13,7 @@ If you want to go one step further, you can get the exact position of the sweep.
 
 For this puzzle, the depth and time are the same, since the packet only goes one depth per picosecond. At 0 picoseconds, it's at the 0 depth. At 1 picoseconds, it's at depth 1. At 5 picoseconds it's at depth 5. And at 98 picoseconds, it's at depth 98. Depth and time are the same!'''
 
-with open("advent13a.txt", "r") as f:
+with open("advent13.in", "r") as f:
     all_file_list = f.readlines()
 
     # Test data!

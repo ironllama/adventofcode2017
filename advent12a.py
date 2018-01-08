@@ -5,7 +5,7 @@
 
 '''With this one, you have to follow a path based on the values encountered. Since you start with 0 and then are give a list of new paths to checkout after the "<->", you then have to follow each one of those paths (happen to line up as line numbers), each which lead to other paths (lines). There is a way of doing this with interation, but I decided to go with recursion, since it's easier for me to think about. Basically, I create a function that takes a line number and then gets the list of lines that are connected to it, and then calls itself with each of those lines. There is the possibility of runaway recursion (infinite loops) and stack overflow, so you have to be a bit careful, depending on your programming language's ability to handle those. Python is pretty good with giving you a warning if you start to get too out there.'''
 
-with open("advent12a.txt", "r") as f:
+with open("advent12.in", "r") as f:
     all_lines = f.readlines()  # Read each line of file as an element in a list.
 
     # Test data!

@@ -7,7 +7,7 @@
 For this puzzle, I initially thought about actually creating a multi-dimensional list, where each position tracks its own current state. However, it looks like the list would need to grow over time at an arbitrary rate, if the position goes outside the bounds of the current multi-dimensional list. So, instead of wrangling a large matrix that grows over time, I thought it would be easier to just have a list of infected positions.
 '''
 
-with open("advent22a.txt", "r") as f: all_list = f.readlines()
+with open("advent22.in", "r") as f: all_list = f.readlines()
 # all_list = ["..#","#..","..."]  # Test data!
 # print("\n".join(all_list))
 

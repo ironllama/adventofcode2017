@@ -5,7 +5,7 @@
 
 '''This first one is pretty easy -- looking at the input, it seems that either a string token (disc name) can appear in the list with its weight and sub-towers, or it can be listed as a sub-tower in another's token line. So determining the root is simply to look for the token that's not every listed in any other token's sub-tower list. Or, collect all the possible sub-tower string tokens and remove the duplicates.'''
 
-with open("advent07a.txt") as f:
+with open("advent07.in") as f:
     all_lines_list = f.readlines()  # Read from file as lines into a list of lines!
 
     # Test data!

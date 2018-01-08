@@ -9,7 +9,7 @@ Day 21 was more of a conceptual pain than a programming pain. To help me get thr
 This lets me simplify the logic and steps that need to be taken to determine further actions. Also let me handle the complexity by doing it in small pieces.
 '''
 
-with open("advent21a.txt", "r") as f: all_rules_list = f.readlines()
+with open("advent21.in", "r") as f: all_rules_list = f.readlines()
 # all_rules_list = ["../.# => ##./#../...", ".#./..#/### => #..#/..../..../#..#"]  # Test data!
 
 all_rules_dict = dict(this_line.split(" => ") for this_line in all_rules_list)  # Process lines into dictionary.

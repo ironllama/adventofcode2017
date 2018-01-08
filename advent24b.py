@@ -9,7 +9,7 @@ Nothing changes in the finding of the valid longest path variations, it's just t
 (We could have also included the test for longest paths inside the recursive function, while we're looking for the paths. Wanted to keep the recursive function simple, though.)
 '''
 
-with open("advent24a.txt", "r") as f: all_lines_list = f.readlines()
+with open("advent24.in", "r") as f: all_lines_list = f.readlines()
 # all_lines_list = ["0/2", "2/2", "2/3", "3/4", "3/5", "0/1", "10/1", "9/10"]  # Test data!
 
 starting_list = []

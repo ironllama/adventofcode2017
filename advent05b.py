@@ -7,7 +7,7 @@
 most of the comments for lines that were exactly the same as Part I but not new lines, so refer to
 Part I for those comments.'''
 
-with open("day5a.txt") as f:
+with open("advent05.in") as f:
     allLinesList = f.read().splitlines()
     # allLinesList = ["0", "3", "0", "1", "-3"]
     allLinesList = [int(thisLine) for thisLine in allLinesList]

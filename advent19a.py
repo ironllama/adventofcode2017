@@ -17,7 +17,7 @@ This one I used my usual multidimensional list to store the map and the traverse
 So, in my solution, the puzzle starts at (5,0) and then moves down to (5,1) then (5,2), etc. When it encounters the "+", it looks left and right to see which side has the non-blank line to follow. Fortunately, the data doesn't have a "+" junction right next to a parallel path (at least one space between parallel paths), so just looking for a non-blank direction sufficed.
 '''
 
-with open("advent19a.txt", "r") as f: lines_list = f.readlines()
+with open("advent19.in", "r") as f: lines_list = f.readlines()
 
 # Test data!
 # lines_list = ["     |          ", "     |  +--+    ", "     A  |  C    ", " F---|----E|--+ ", "     |  |  |  D ", "     +B-+  +--+ "]

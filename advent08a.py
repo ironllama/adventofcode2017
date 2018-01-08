@@ -5,7 +5,7 @@
 
 '''This one is also linear - literally: you process one line at a time. One could parse each string by separating out into tokens, and then depending on the value of the token, branch out into if/else/switch branches to execute different tasks. I noticed that the conditional part of each instruction line was pretty similiar in syntax to what Python uses (!=, ==, etc.) so I wanted to use eval() or exec() to run them. While I would almost never do this in actual customer production code, this is just for fun, so I ended up using exec(). (The eval() can only do simple expressions, so the if statement makes it barf.) So the challenge was just string parsing into a correct and executable Python string.'''
 
-with open("advent08a.txt") as f:
+with open("advent08.in") as f:
     all_lines_list = f.readlines()  # Read from file as lines into a list of lines!
 
 register = {}  # Where I store all my values.

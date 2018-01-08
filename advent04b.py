@@ -13,7 +13,7 @@ anagrams is pretty tough if you are going to test each possibility manually. To 
 and a bit more efficiently, one can rearrange all the letters of each word alphabetically and then
 see if the letters are the same for each word.'''
 
-f = open("day4a.txt")
+f = open("advent04.in")
 allLinesList = f.readlines()  # Read from file as lines into a list of lines!
 
 # print("TOTAL LINES: ", len(allLinesList))

@@ -5,7 +5,7 @@
 
 '''The second part builds on the first part. Since you know you can traverse the "pipes" and find what is connected to each other, now you have to find other groups. The way I approached it was to create a list of all possible nodes(numbers) -- easy, since all the lines numbers are sequential from 0 to 1999 for my problem set, and then as you encounter a node(number), you remove it from the list. So, this list becomes a list of numbers left to process. Then when you're finished with a group, you start with another number in this list of leftover nodes (I just pick whatever is at the beginning of the list) and start processing another group. All the while, I'm bumping up a tracking variable that's counting up.'''
 
-with open("advent12a.txt", "r") as f:
+with open("advent12.in", "r") as f:
     all_lines = f.readlines()
 
     # Test data!

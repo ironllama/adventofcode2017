@@ -1,5 +1,5 @@
 
-with open("advent16a.txt", "r") as f: all_file_list = f.read().strip().split(",")
+with open("advent16.in", "r") as f: all_file_list = f.read().strip().split(",")
 programs = list(map(chr, range(97, 97 + 16)))  # List instead of string, to support re-assignment!
 num_dances = 1000000000  # NEW: A Billion?!! Holy cow.
 

@@ -7,7 +7,7 @@
 The programs could have just been a string "abcdefghijklmnop", but I decided to have Python generate them. Didn't really save anything, but was a nice little mini-challenge. Other than that, it was pretty much reading each line of the file, chopping it up by spaces into tokens, the first being the code on which to make a move, and the rest determining the actors in the move.
 '''
 
-with open("advent16a.txt", "r") as f: all_file_list = f.read().strip().split(",")
+with open("advent16.in", "r") as f: all_file_list = f.read().strip().split(",")
 programs = list(map(chr, range(97, 97 + 16))  # List instead of string, to support re-assignment!
 
 # Test data!

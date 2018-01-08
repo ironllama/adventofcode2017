@@ -3,7 +3,7 @@
 # Python
 
 
-f = open("advent01.txt", "r")
+f = open("advent01.in", "r")
 allFileStr = f.read()
 
 sumTotal = 0  # To keep track of total.

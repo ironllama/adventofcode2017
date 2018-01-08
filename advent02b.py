@@ -3,7 +3,7 @@
 # Python
 
 
-f = open("advent02.txt", "r")
+f = open("advent02.in", "r")
 allLinesList = f.readlines()
 
 sumTotal = 0

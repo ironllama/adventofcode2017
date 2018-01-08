@@ -10,6 +10,7 @@ and I was getting sleepy. So, I just decided to wing it and if the program ended
 just increase the size of the array in code. (Otherwise the program would have to regenerate a new, larger list and then
 copy over all the values, with the center readjusted to the size of the new list. Not fun.)
 '''
+
 # targetNum = 12
 # targetNum = 23
 # targetNum = 1024

@@ -15,7 +15,7 @@ If you want to go one step further, you can get the exact position of the sweep.
 For this puzzle, the depth and time are the same, since the packet only goes one depth per picosecond. At 0 picoseconds, it's at the 0 depth. At 1 picoseconds, it's at depth 1. At 5 picoseconds it's at depth 5. And at 98 picoseconds, it's at depth 98. Depth and time are the same!
 */
 
-    $allFileStr = file_get_contents("advent13a.txt");
+    $allFileStr = file_get_contents("advent13.in");
 
     # Test data!
     // $allFileStr = "0: 3\n1: 2\n4: 4\n6: 4";

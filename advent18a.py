@@ -7,7 +7,7 @@
 Parse through string instructions, one per line. Each instruction line is broken up into tokens, the first of which is the instruction itself that determines operation, the second is the register location to change, and the third (if applicable) is either a value to use in the operation, or a register location that has this value to use. Just looking for the first time a 'rcv' is called and the register location (second token) is not zero. The whole time, 'snd' operations set a variable (I called it last_freq), and at the end of the program, the last value that was assigned to that variable is displayed.
 '''
 
-with open("advent18a.txt", "r") as f: all_lines_list = f.readlines()
+with open("advent18.in", "r") as f: all_lines_list = f.readlines()
 
 # Test data!
 # all_lines_list = ["set a 1", "add a 2", "mul a a", "mod a 5", "snd a", "set a 0", "rcv a", "jgz a -1", "set a 1", "jgz a -2"]

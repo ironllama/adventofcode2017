@@ -7,7 +7,7 @@
 No change! Except upping the loop to run it 18 times. That's it! Takes a little long to run, though.
 '''
 
-with open("advent21a.txt", "r") as f: all_rules_list = f.readlines()
+with open("advent21.in", "r") as f: all_rules_list = f.readlines()
 # all_rules_list = ["../.# => ##./#../...", ".#./..#/### => #..#/..../..../#..#"]  # Test data!
 
 all_rules_dict = dict(this_line.split(" => ") for this_line in all_rules_list)

@@ -5,7 +5,7 @@
 
 '''The second part is pretty easy, as we just need to check after each operation whether the last thing we just did produced a higher value than any other ever. We're using a variable to track the highest ever.'''
 
-with open("advent08a.txt") as f:
+with open("advent08.in") as f:
     all_lines_list = f.readlines()  # Read from file as lines into a list of lines!
 
 register = {}

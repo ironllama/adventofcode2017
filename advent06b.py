@@ -6,7 +6,7 @@
 '''Fortunately, not much to change in Part II. Decided to let the loop store the final combo, so that I can know which state
 pattern in history was the one that repeated. (The last one!)'''
 
-with open("advent06a.txt") as f:
+with open("advent06.in") as f:
     allNumsList = f.read().split("\t")
     # allNumsList = ["0", "2", "7", "0"]
 

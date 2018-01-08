@@ -6,7 +6,7 @@
 '''I wish I could say I found a prettier way of doing this, but I just did it the easy, inefficient way -- brute force! I tried every picosecond combination until I found one that yielded no catches!'''
 
 
-with open("advent13a.txt", "r") as f:
+with open("advent13.in", "r") as f:
     all_file_list = f.readlines()
 
     # Test data!

@@ -12,7 +12,7 @@ I used the even-q vertical layout, because that seemed the closest to the standa
 
 import math as math
 
-with open("advent11a.txt", "r") as f:
+with open("advent11.in", "r") as f:
     all_file = f.read().strip()
 
     # Test data!
